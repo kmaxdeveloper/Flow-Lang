@@ -1,0 +1,54 @@
+fn doubleVal(n: Int): Int {
+    return n * 2
+}
+
+fn formatTitle(s: String): String {
+    return "=== " + s + " ==="
+}
+
+fn main() {
+    print("--------------------------------------------------")
+    print("      Flow Language Innovatsiyalari Demo          ")
+    print("--------------------------------------------------")
+
+    // 1. Stdlib & Pipeline (|>)
+    var rawText = "   flow presentation demo   "
+    var cleanText = rawText.trim()
+    cleanText |> formatTitle() |> print()
+
+    // 2. Live Variable (cheklangan o'qish imkoniyati)
+    live[2] secretToken: String = "FLOW-KEY-9999"
+    print("[Live #1]: " + secretToken)
+    print("[Live #2]: " + secretToken)
+    print("[Live Expired?]: " + str(isExpired(secretToken)))
+
+    // 3. Step While (cheklangan qadamli tsikl)
+    var stepCounter = 0
+    var loopTotal = 0
+    step[3] while (stepCounter < 100) {
+        stepCounter += 1
+        loopTotal += 10
+        print("  [StepWhile] Qadam: " + str(stepCounter) + ", Jami: " + str(loopTotal))
+    }
+
+    // 4. Match Expression (Pattern Matching)
+    var score = 95
+    var grade = match (score) {
+        100 => "Ideal (A+)",
+        95 => "A'lo (A)",
+        else => "Boshqa"
+    }
+    print("[Match natijasi]: " + grade)
+
+    // 5. Functional Pipeline sonlar bilan
+    var initialNum = 15
+    var doubled = initialNum |> doubleVal()
+    print("[Pipeline natijasi]: 15 |> doubleVal() = " + str(doubled))
+
+    // 6. Array & Stdlib
+    var tags = ["compiler", "vm", "visualizer"]
+    tags.push("innovative")
+    print("[Array metodlari]: elements=" + str(tags.length) + ", joined=" + tags.join(", "))
+    print("--------------------------------------------------")
+}
+

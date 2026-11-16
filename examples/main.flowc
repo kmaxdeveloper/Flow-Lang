@@ -1,0 +1,169 @@
+{
+  "magic": "FLOWC",
+  "version": 1,
+  "instructions": [
+    {
+      "op": "DEF_FUNC",
+      "arg": {
+        "name": "main",
+        "params": [],
+        "code": [
+          {
+            "op": "PUSH_CONST",
+            "arg": 15
+          },
+          {
+            "op": "STORE_VAR",
+            "arg": "a"
+          },
+          {
+            "op": "PUSH_CONST",
+            "arg": 5
+          },
+          {
+            "op": "STORE_VAL",
+            "arg": "b"
+          },
+          {
+            "op": "PUSH_CONST",
+            "arg": "Flow Test"
+          },
+          {
+            "op": "STORE_VAR",
+            "arg": "name"
+          },
+          {
+            "op": "LOAD_VAR",
+            "arg": "a"
+          },
+          {
+            "op": "LOAD_VAR",
+            "arg": "b"
+          },
+          {
+            "op": "MUL"
+          },
+          {
+            "op": "PUSH_CONST",
+            "arg": 10
+          },
+          {
+            "op": "SUB"
+          },
+          {
+            "op": "STORE_VAR",
+            "arg": "result"
+          },
+          {
+            "op": "LOAD_VAR",
+            "arg": "name"
+          },
+          {
+            "op": "PRINT"
+          },
+          {
+            "op": "LOAD_VAR",
+            "arg": "result"
+          },
+          {
+            "op": "PRINT"
+          },
+          {
+            "op": "LOAD_VAR",
+            "arg": "result"
+          },
+          {
+            "op": "PUSH_CONST",
+            "arg": 50
+          },
+          {
+            "op": "GT"
+          },
+          {
+            "op": "JUMP_IF_FALSE",
+            "arg": 23
+          },
+          {
+            "op": "PUSH_CONST",
+            "arg": "Result 50 dan katta"
+          },
+          {
+            "op": "PRINT"
+          },
+          {
+            "op": "JUMP",
+            "arg": 25
+          },
+          {
+            "op": "PUSH_CONST",
+            "arg": "Result kichik"
+          },
+          {
+            "op": "PRINT"
+          },
+          {
+            "op": "PUSH_CONST",
+            "arg": 0
+          },
+          {
+            "op": "STORE_VAR",
+            "arg": "i"
+          },
+          {
+            "op": "LOAD_VAR",
+            "arg": "i"
+          },
+          {
+            "op": "PUSH_CONST",
+            "arg": 3
+          },
+          {
+            "op": "LT"
+          },
+          {
+            "op": "JUMP_IF_FALSE",
+            "arg": 38
+          },
+          {
+            "op": "LOAD_VAR",
+            "arg": "i"
+          },
+          {
+            "op": "PRINT"
+          },
+          {
+            "op": "LOAD_VAR",
+            "arg": "i"
+          },
+          {
+            "op": "PUSH_CONST",
+            "arg": 1
+          },
+          {
+            "op": "ADD"
+          },
+          {
+            "op": "STORE_VAR",
+            "arg": "i"
+          },
+          {
+            "op": "JUMP",
+            "arg": 27
+          },
+          {
+            "op": "RETURN",
+            "arg": false
+          }
+        ],
+        "is_inner": false
+      }
+    },
+    {
+      "op": "CALL_FUNC",
+      "arg": {
+        "name": "main",
+        "arg_count": 0
+      }
+    }
+  ]
+}

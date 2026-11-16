@@ -1,0 +1,17 @@
+fn main() {
+    var rawText = "   Flow Language v0.6.0   "
+    var cleanText = rawText.trim()
+    print("Trimmed: '" + cleanText + "'")
+    
+    var parts = cleanText.split(" ")
+    print("Parts count: " + str(parts.length))
+    
+    var val = -15.7
+    print("Abs: " + str(val.abs()))
+    print("Round: " + str(val.round()))
+
+    var arr = [10, 20, 30]
+    print("Contains 20: " + str(arr.contains(20)))
+    var last = arr.pop()
+    print("Popped: " + str(last) + ", New length: " + str(arr.length))
+}

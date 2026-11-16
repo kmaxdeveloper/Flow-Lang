@@ -1,0 +1,21 @@
+fn main() {
+    var a = 15
+    val b = 5
+    var name = "Flow Test"
+
+    var result = (a * b) - 10
+    print(name)
+    print(result)
+
+    if (result > 50) {
+        print("Result 50 dan katta")
+    } else {
+        print("Result kichik")
+    }
+
+    var i = 0
+    while (i < 3) {
+        print(i)
+        i = i + 1
+    }
+}

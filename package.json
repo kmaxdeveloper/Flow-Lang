@@ -1,0 +1,101 @@
+{
+  "name": "flow-language-tools",
+  "displayName": "Flow Language Support",
+  "description": "Syntax Highlighting, IntelliSense, Snippets, Real-time Diagnostics for Flow Language (.flw)",
+  "version": "0.3.0",
+  "icon": "icons/flow.png",
+  "publisher": "flow-lang",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Linters"
+  ],
+  "activationEvents": [
+    "onLanguage:flow"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "flow",
+        "aliases": ["Flow", "flow"],
+        "extensions": [".flw"],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/flow.svg",
+          "dark": "./icons/flow.svg"
+        }
+      },
+      {
+        "id": "flowc",
+        "aliases": ["Flow Bytecode", "flowc"],
+        "extensions": [".flowc"],
+        "icon": {
+          "light": "./icons/flowc.svg",
+          "dark": "./icons/flowc.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "flow",
+        "scopeName": "source.flow",
+        "path": "./syntaxes/flow.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "flow",
+        "path": "./snippets/flow.code-snippets"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "flow-icons",
+        "label": "Flow Icons",
+        "path": "./icons/flow-icon-theme.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "flow.runCurrentFile",
+        "title": "Flow: Joriy faylni ishga tushirish",
+        "icon": "$(play)"
+      },
+      {
+        "command": "flow.checkCurrentFile",
+        "title": "Flow: Statik tahlil (Check)",
+        "icon": "$(search)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "flow.runCurrentFile",
+          "when": "resourceExtname == .flw",
+          "group": "navigation@1"
+        },
+        {
+          "command": "flow.checkCurrentFile",
+          "when": "resourceExtname == .flw",
+          "group": "navigation@2"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "flow.runCurrentFile",
+        "key": "ctrl+f5",
+        "when": "editorTextFocus && resourceExtname == .flw"
+      },
+      {
+        "command": "flow.checkCurrentFile",
+        "key": "ctrl+shift+f6",
+        "when": "editorTextFocus && resourceExtname == .flw"
+      }
+    ]
+  }
+}

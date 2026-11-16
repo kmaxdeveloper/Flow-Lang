@@ -1,0 +1,18 @@
+{
+  "iconDefinitions": {
+    "_flow_file": {
+      "iconPath": "./flow.svg"
+    },
+    "_flowc_file": {
+      "iconPath": "./flowc.svg"
+    }
+  },
+  "fileExtensions": {
+    "flw": "_flow_file",
+    "flowc": "_flowc_file"
+  },
+  "languageIds": {
+    "flow": "_flow_file",
+    "flowc": "_flowc_file"
+  }
+}

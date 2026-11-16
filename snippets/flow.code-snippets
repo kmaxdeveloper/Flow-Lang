@@ -1,0 +1,351 @@
+{
+  "Flow Function": {
+    "prefix": "fn",
+    "body": [
+      "fn ${1:name}(${2:param}: ${3:Type}): ${4:Void} {",
+      "    ${0}",
+      "}"
+    ],
+    "description": "Flow funksiyasi e'loni"
+  },
+  "Flow Expression Function": {
+    "prefix": "fnx",
+    "body": [
+      "fn ${1:name}(${2:param}: ${3:Type}): ${4:Type} => ${0}"
+    ],
+    "description": "Flow expression-body funksiyasi (=> operator)"
+  },
+  "Flow Inner Function": {
+    "prefix": "inner",
+    "body": [
+      "inner fn ${1:name}(${2:param}: ${3:Type}): ${4:Void} {",
+      "    ${0}",
+      "}"
+    ],
+    "description": "Flow ichki funksiyasi e'loni"
+  },
+  "Flow Class": {
+    "prefix": "class",
+    "body": [
+      "class ${1:Name}(var ${2:field}: ${3:String}) {",
+      "    fn ${4:method}() {",
+      "        ${0}",
+      "    }",
+      "}"
+    ],
+    "description": "Flow klass e'loni (Primary Constructor bilan)"
+  },
+  "Flow Class Full": {
+    "prefix": "classf",
+    "body": [
+      "class ${1:Name}(var ${2:field1}: ${3:String}, var ${4:field2}: ${5:Int}) {",
+      "    fn greet() {",
+      "        print(\"Salom! Men \" + this.${2:field1})",
+      "    }",
+      "",
+      "    fn ${6:method}(): ${7:Void} {",
+      "        ${0}",
+      "    }",
+      "}"
+    ],
+    "description": "Flow klass to'liq shablon"
+  },
+  "Flow Main Function": {
+    "prefix": "main",
+    "body": [
+      "fn main() {",
+      "    ${0}",
+      "}"
+    ],
+    "description": "Flow main() funksiyasi"
+  },
+  "Flow Var Declaration": {
+    "prefix": "var",
+    "body": [
+      "var ${1:name} = ${0}"
+    ],
+    "description": "O'zgaruvchi e'loni (var)"
+  },
+  "Flow Val Declaration": {
+    "prefix": "val",
+    "body": [
+      "val ${1:name} = ${0}"
+    ],
+    "description": "O'zgarmas qiymat e'loni (val)"
+  },
+  "Flow Live Variable (Default 3)": {
+    "prefix": "live",
+    "body": [
+      "live ${1:name} = ${0:value}"
+    ],
+    "description": "Flow live o'zgaruvchi (default limit 3)"
+  },
+  "Flow Live Variable with Limit": {
+    "prefix": "liven",
+    "body": [
+      "live ${1:limit} ${2:name} = ${0:value}"
+    ],
+    "description": "Flow live N o'zgaruvchi (aniq limit bilan)"
+  },
+  "Flow Step While Loop": {
+    "prefix": "stepw",
+    "body": [
+      "step[${1:3}] while (${2:condition}) {",
+      "    ${0}",
+      "}"
+    ],
+    "description": "Flow step while sikli (limit bilan)"
+  },
+  "Flow If Statement": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition}) {",
+      "    ${0}",
+      "}"
+    ],
+    "description": "Flow if sharti"
+  },
+  "Flow If-Else Statement": {
+    "prefix": "ife",
+    "body": [
+      "if (${1:condition}) {",
+      "    ${2}",
+      "} else {",
+      "    ${0}",
+      "}"
+    ],
+    "description": "Flow if-else sharti"
+  },
+  "Flow If-Elif-Else Statement": {
+    "prefix": "ifee",
+    "body": [
+      "if (${1:condition}) {",
+      "    ${2}",
+      "} elif (${3:condition2}) {",
+      "    ${4}",
+      "} else {",
+      "    ${0}",
+      "}"
+    ],
+    "description": "Flow if-elif-else sharti"
+  },
+  "Flow Match On Value Expression": {
+    "prefix": "match",
+    "body": [
+      "match (${1:expr}) {",
+      "    ${2:pattern1} => ${3:result1},",
+      "    ${4:pattern2} => ${5:result2},",
+      "    else => ${0:default}",
+      "}"
+    ],
+    "description": "Flow match qiymat bo'yicha ifodasi"
+  },
+  "Flow Match Conditions Expression": {
+    "prefix": "matchc",
+    "body": [
+      "match {",
+      "    ${1:condition1} => ${2:result1},",
+      "    ${3:condition2} => ${4:result2},",
+      "    else => ${0:default}",
+      "}"
+    ],
+    "description": "Flow match shartlar bo'yicha ifodasi"
+  },
+  "Flow While Loop": {
+    "prefix": "while",
+    "body": [
+      "while (${1:condition}) {",
+      "    ${0}",
+      "}"
+    ],
+    "description": "Flow while sikli"
+  },
+  "Flow For-In Loop": {
+    "prefix": "for",
+    "body": [
+      "for (${1:item} in ${2:collection}) {",
+      "    ${0}",
+      "}"
+    ],
+    "description": "Flow for-in sikli"
+  },
+  "Flow For Range Loop": {
+    "prefix": "forr",
+    "body": [
+      "for (${1:i} in ${2:0}..${3:10}) {",
+      "    ${0}",
+      "}"
+    ],
+    "description": "Flow for diapazon sikli (0..N)"
+  },
+  "Flow Return": {
+    "prefix": "return",
+    "body": [
+      "return ${0}"
+    ],
+    "description": "Flow return iborasi"
+  },
+  "Flow Print": {
+    "prefix": "print",
+    "body": [
+      "print(${0})"
+    ],
+    "description": "Konsolga chiqarish"
+  },
+  "Flow New Object": {
+    "prefix": "new",
+    "body": [
+      "new ${1:ClassName}(${0})"
+    ],
+    "description": "Yangi ob'ekt yaratish"
+  },
+  "Flow Pipeline": {
+    "prefix": "pipe",
+    "body": [
+      "${1:value} |> ${2:func}()"
+    ],
+    "description": "Pipeline operatori (|>)"
+  },
+  "Flow Array": {
+    "prefix": "arr",
+    "body": [
+      "var ${1:name} = [${0}]"
+    ],
+    "description": "Massiv e'loni"
+  },
+  "Flow String Type Annotation": {
+    "prefix": "String",
+    "body": ["String"],
+    "description": "String turi"
+  },
+  "Flow Int Type Annotation": {
+    "prefix": "Int",
+    "body": ["Int"],
+    "description": "Int turi"
+  },
+  "Flow Boolean Type Annotation": {
+    "prefix": "Boolean",
+    "body": ["Boolean"],
+    "description": "Boolean turi"
+  },
+  "Flow isExpired Function": {
+    "prefix": "isExpired",
+    "body": [
+      "isExpired(${1:variable})"
+    ],
+    "description": "Live o'zgaruvchi muddati tugaganini tekshirish"
+  },
+  "Flow isExpired Method": {
+    "prefix": "expired",
+    "body": [
+      "${1:variable}.isExpired()"
+    ],
+    "description": "Live o'zgaruvchi muddati tugaganini metod orqali tekshirish"
+  },
+  "Flow Live Variable with Bracket Limit": {
+    "prefix": "livenb",
+    "body": [
+      "live[${1:limit}] ${2:name} = ${0:value}"
+    ],
+    "description": "Flow live[N] o'zgaruvchi (bracket limit bilan)"
+  },
+  "Flow String Trim": {
+    "prefix": "trim",
+    "body": [
+      "${1:text}.trim()"
+    ],
+    "description": "Satr boshi va oxiridagi bo'sh joylarni olib tashlash (.trim)"
+  },
+  "Flow String Split": {
+    "prefix": "split",
+    "body": [
+      "${1:text}.split(${2:\" \"})"
+    ],
+    "description": "Satrni massivga ajratish (.split)"
+  },
+  "Flow String Replace": {
+    "prefix": "replace",
+    "body": [
+      "${1:text}.replace(${2:old}, ${3:new})"
+    ],
+    "description": "Satrdagi qismni almashtirish (.replace)"
+  },
+  "Flow String StartsWith": {
+    "prefix": "startsWith",
+    "body": [
+      "${1:text}.startsWith(${2:prefix})"
+    ],
+    "description": "Satr boshlanishini tekshirish (.startsWith)"
+  },
+  "Flow String EndsWith": {
+    "prefix": "endsWith",
+    "body": [
+      "${1:text}.endsWith(${2:suffix})"
+    ],
+    "description": "Satr tugashini tekshirish (.endsWith)"
+  },
+  "Flow Number Abs": {
+    "prefix": "abs",
+    "body": [
+      "${1:num}.abs()"
+    ],
+    "description": "Sonning absolyut qiymati (.abs)"
+  },
+  "Flow Number Round": {
+    "prefix": "round",
+    "body": [
+      "${1:num}.round()"
+    ],
+    "description": "Sonni yaxlitlash (.round)"
+  },
+  "Flow Number Ceil": {
+    "prefix": "ceil",
+    "body": [
+      "${1:num}.ceil()"
+    ],
+    "description": "Sonni yuqoriga yaxlitlash (.ceil)"
+  },
+  "Flow Number Floor": {
+    "prefix": "floor",
+    "body": [
+      "${1:num}.floor()"
+    ],
+    "description": "Sonni pastga yaxlitlash (.floor)"
+  },
+  "Flow Number Clamp": {
+    "prefix": "clamp",
+    "body": [
+      "${1:num}.clamp(${2:min}, ${3:max})"
+    ],
+    "description": "Sonni oraliqda chegaralash (.clamp)"
+  },
+  "Flow Array Pop": {
+    "prefix": "pop",
+    "body": [
+      "${1:arr}.pop()"
+    ],
+    "description": "Massivning oxirgi elementini sug'urib olish (.pop)"
+  },
+  "Flow Array Contains": {
+    "prefix": "contains",
+    "body": [
+      "${1:arr}.contains(${2:val})"
+    ],
+    "description": "Element mavjudligini tekshirish (.contains)"
+  },
+  "Flow Array Join": {
+    "prefix": "join",
+    "body": [
+      "${1:arr}.join(${2:\", \"})"
+    ],
+    "description": "Massiv elementlarini birlashtirish (.join)"
+  },
+  "Flow Array Slice": {
+    "prefix": "slice",
+    "body": [
+      "${1:arr}.slice(${2:start}, ${3:end})"
+    ],
+    "description": "Massiv qismini ajratib olish (.slice)"
+  }
+}
+

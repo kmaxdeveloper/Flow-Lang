@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="flwGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="50%" stop-color="#00A2FF" />
+      <stop offset="100%" stop-color="#7B2CBF" />
+    </linearGradient>
+    <linearGradient id="flwWave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#BD00FF" />
+    </linearGradient>
+  </defs>
+
+  <!-- Orqa fon yumaloq (Dark theme transparent container) -->
+  <rect x="1" y="1" width="30" height="30" rx="7" fill="#141724" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.3" />
+
+  <!-- Flow "F" magistrali -->
+  <path d="M 8 7 C 8 6.45 8.45 6 9 6 L 12 6 C 12.55 6 13 6.45 13 7 L 13 25 C 13 25.55 12.55 26 12 26 L 9 26 C 8.45 26 8 25.55 8 25 Z" fill="url(#flwGrad)" />
+
+  <!-- Flow "F" yuqori to'lqini -->
+  <path d="M 13 7 C 16 5.5 20 5.5 23.5 7.5 C 24.8 8.3 24 10.5 22.5 10.5 C 19.5 10.5 16.5 10.8 13 11.8 Z" fill="url(#flwWave)" />
+
+  <!-- Flow "F" o'rta to'lqini -->
+  <path d="M 13 14.5 C 15.5 13.5 18.5 13.2 21 14.8 C 22.2 15.5 21.5 17.5 20 17.5 C 17.8 17.5 15.5 17.7 13 18.5 Z" fill="url(#flwWave)" />
+
+  <!-- Dinamik nuqta -->
+  <circle cx="22.5" cy="23.5" r="2" fill="#00E5FF" />
+</svg>

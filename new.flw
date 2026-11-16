@@ -1,0 +1,14 @@
+fn formatHeader(title: String): String {
+    return "=== " + title + " ==="
+}
+
+fn main() {
+    // 1. Qavssiz String literal bilan boshlanadigan pipeline
+    "talabalar ro'yxati va tahlili" |> formatHeader() |> print();
+
+    // 2. Qavsli String literal bilan boshlanadigan pipeline
+    ("talabalar ro'yxati va tahlili") |> formatHeader() |> print()
+
+    // 3. Nuqta-vergul bilan tugaydigan oddiy ifoda
+    "Test yakunlandi" |> print();
+}
